@@ -1,0 +1,112 @@
+$horizontal-line: #e0e0e0;
+$black: #000;
+$max-width-header: 1232px;
+$placeholder-input-search: #a3a0a0;
+
+%align-item-center {
+  align-items: center;
+}
+
+@mixin flx($property, $jty-cnt) {
+  display: flex;
+  #{$property}: $jty-cnt;
+}
+
+@mixin for-phone-only {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@function calculateRem($size) {
+  @return $size / 16px * 1rem;
+}
+
+@mixin fontSize($size) {
+  font-size: calculateRem($size);
+}
+
+.header {
+  background-color: white;
+  position: fixed;
+  border-bottom: 1px solid $horizontal-line;
+  @include flx(justify-content, center);
+  @extend %align-item-center;
+  // padding: 0 10px;
+  margin: auto;
+  top: 0;
+  width: 100%;
+  flex-direction: column;
+  z-index: 1;
+
+  &__links {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__search-input {
+    width: 100%;
+    height: 38px;
+    border-radius: 7px;
+    border: 0.8px solid $gray-border-search-input;
+    max-width: $max-width-header;
+    padding-left: 20px;
+    font-weight: bold;
+
+    &::placeholder {
+      color: $placeholder-input-search;
+    }
+
+    &:hover {
+      border-color: $black;
+      cursor: text;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    white-space: nowrap;
+    max-width: $max-width-header;
+    margin-bottom: 18px;
+    @media screen and (max-width: $break-nav-layout) {
+      display: none;
+    }
+    ul {
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+    }
+    li {
+      @include fontSize(12px);
+      @media screen and (max-width: 1315px) {
+        @include fontSize(10px);
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: arboria, sans-serif;
+        font-weight: 600;
+        padding-bottom: 8px;
+        line-height: 1.42857143;
+        letter-spacing: 0.055em;
+        line-height: 1.43;
+        &:hover {
+          border-bottom: 2px solid $black;
+        }
+      }
+    }
+  }
+  &__toggle-menu {
+    &--container {
+      // @include flx(justify-content, space-around);
+      // align-content: flex-end;
+    }
+    &--text {
+      align-self: flex-end;
+      border: 1px solid red;
+    }
+  }
+}

@@ -1,3 +1,66 @@
-body {
-  color: red;
+// colors
+$gray-border-search-input: #cccccc;
+$gray-placeholder-search-input: #9b9b9b;
+$black: #000;
+
+// variables
+$break-nav-layout: 1000px;
+// 1080px
+
+@import "header", "main", "footer";
+
+%align-item-center {
+  align-items: center;
+}
+
+@mixin flx($property, $jty-cnt) {
+  display: flex;
+  #{$property}: $jty-cnt;
+}
+
+@mixin for-phone-only {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+// @include for-phone-only {
+//   ....
+// }
+
+@function calculateRem($size) {
+  @return $size / 16px * 1rem;
+}
+
+@mixin fontSize($size) {
+  font-size: calculateRem($size);
+}
+
+* {
+  font-family: Arboria, sans-serif;
+}
+
+.rchl-logo-container {
+  @include flx(justify-content, center);
+  width: 100%;
+  height: 100%;
+
+  .rchl-logo {
+    @media screen and (min-width: $break-nav-layout) {
+      background-image: url("../assets/riachuelo.svg");
+    }
+    @media screen and (max-width: $break-nav-layout) {
+      background-image: url("../assets/rchlo.svg");
+    }
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.search-icon {
+  background: url("../assets/filter.svg");
+  width: 16px;
+  height: 16px;
 }

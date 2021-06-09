@@ -1,5 +1,324 @@
-body {
-  color: red;
+.header {
+  align-items: center;
+}
+
+.header {
+  background-color: white;
+  position: fixed;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  top: 0;
+  width: 98%;
+  padding: 0 1%;
+  flex-direction: column;
+  z-index: 1;
+}
+.header__links {
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.header__search-input {
+  width: 100%;
+  background: url("../assets/filter.svg") no-repeat scroll 8px 8px;
+  background-size: 20px;
+  height: 38px;
+  border-radius: 7px;
+  border: 0.8px solid #cccccc;
+  max-width: 1232px;
+  padding-left: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.header__search-input::placeholder {
+  color: #a3a0a0;
+}
+.header__search-input:hover {
+  border-color: #000;
+  cursor: text;
+}
+.header__nav {
+  width: 100%;
+  white-space: nowrap;
+  max-width: 1232px;
+  margin-bottom: 18px;
+}
+@media screen and (max-width: 1000px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__nav ul {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__nav li {
+  font-size: 0.75rem;
+}
+@media screen and (max-width: 1315px) {
+  .header__nav li {
+    font-size: 0.625rem;
+  }
+}
+.header__nav li a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: arboria, sans-serif;
+  font-weight: 600;
+  padding-bottom: 8px;
+  line-height: 1.42857143;
+  letter-spacing: 0.055em;
+  line-height: 1.43;
+}
+.header__nav li a:hover {
+  border-bottom: 2px solid #000;
+}
+.header__toggle-menu {
+  background-image: url("../assets/menu.svg");
+  width: 24px;
+  height: 24px;
+  position: fixed;
+  left: 24px;
+}
+.header__toggle-menu:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 1000px) {
+  .header__toggle-menu {
+    display: none;
+  }
+}
+.header .active {
+  background-image: url("../assets/close.svg");
+  width: 24px;
+  height: 24px;
+}
+.header .active:after {
+  content: "fechar";
+}
+.header__toggle-menu {
+  margin-top: 6px;
+}
+.header__toggle-menu:after {
+  font-family: arboria, sans-serif;
+  position: fixed;
+  content: "menu";
+  top: 42px;
+  left: 25px;
+  font-size: 9px;
+}
+@media screen and (min-width: 1000px) {
+  .header__toggle-menu:after {
+    display: none;
+  }
+}
+
+.header {
+  align-items: center;
+}
+
+.main__content {
+  padding: 0 16px;
+  max-width: 1150px;
+  margin: 160px auto 0;
+}
+
+.main__title-collection {
+  font-size: 1.375rem;
+  font-weight: 300;
+  line-height: 1.167;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  .main__title-collection {
+    display: none;
+  }
+}
+
+.breadcrumbs__list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.breadcrumbs__list li {
+  padding: 0 4px;
+  color: #261e1e;
+  font-family: Arboria, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+.breadcrumbs__list li:not(:last-child):after {
+  content: "/";
+  padding-left: 6px;
+}
+.breadcrumbs__list li:last-child {
+  font-weight: bold;
+}
+.breadcrumbs__list li a {
+  color: #585858;
+  text-decoration: none;
+}
+.breadcrumbs__list li a:hover {
+  border-bottom: 1px black solid;
+}
+@media screen and (max-width: 1000px) {
+  .breadcrumbs {
+    display: none;
+  }
+}
+
+.filters__list {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid #e0e0e0;
+}
+.filters__list li {
+  padding: 18px 24px 18px 8px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.filters__list li:hover {
+  cursor: pointer;
+  background-color: rgba(38, 30, 30, 0.04);
+}
+.filters__list li:after {
+  position: absolute;
+  content: "";
+  background: url("../assets/down-arrow.svg") no-repeat;
+  height: 18px;
+  width: 18px;
+  background-size: 12px;
+  margin-left: 8px;
+}
+@media screen and (max-width: 1000px) {
+  .filters {
+    display: none;
+  }
+}
+
+.products__list {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  grid-gap: 1rem;
+}
+.products__list-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.87);
+  padding-bottom: 14px;
+}
+.products__list-card--description {
+  font-size: 0.6875rem;
+  font-weight: 300;
+  line-height: 1.43;
+  text-align: center;
+  margin-top: 10px;
+  min-height: 30px;
+  text-transform: uppercase;
+}
+.products__list-card--price {
+  padding: 8px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: inherit;
+}
+.products__list-card img {
+  width: 100%;
+}
+.products__list li:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.header {
+  align-items: center;
+}
+
+footer {
+  padding: 0 16%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+.footer__offers {
+  display: flex;
+  flex-grow: 0;
+  max-width: 66.666667%;
+  flex-basis: 66.666667%;
+}
+.footer__mobile-apps {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-grow: 0;
+  max-width: 33.333333%;
+  flex-basis: 33.333333%;
+  margin: auto;
+  flex-grow: 0;
+}
+.footer__mobile-apps > p {
+  font-family: Arboria, sans-serif;
+  margin-top: 8px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  margin-right: 50px;
+}
+.footer__mobile-apps img {
+  width: 110px;
+  padding: 0 8px;
+}
+
+.header {
+  align-items: center;
+}
+
+* {
+  font-family: Arboria, sans-serif;
+}
+
+.rchl-logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.rchl-logo-container .rchl-logo {
+  height: 40px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 1000px) {
+  .rchl-logo-container .rchl-logo {
+    background-image: url("../assets/riachuelo.svg");
+  }
+}
+@media screen and (max-width: 1000px) {
+  .rchl-logo-container .rchl-logo {
+    background-image: url("../assets/rchlo.svg");
+  }
+}
+
+.search-icon {
+  background: url("../assets/filter.svg");
+  width: 16px;
+  height: 16px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -15,18 +15,36 @@
           ':35729/livereload.js?snipver=1"></' +
           "script>"
       );
+
+      function toggleHeaderMenu() {
+        const menuElement = document.getElementById('toggle-menu')
+        menuElement.classList.toggle('active')
+      }
+
+      let primeiro = 5;
+      let segundo = 7;
+      segundo = primeiro;
+      primeiro = 10;
+      console.log(segundo);
+
     </script>
+    
   </head>
   <body>
-    <header>
-      <h1>
-        <img src="assets/riachuelo.svg" alt="" />
-      </h1>
-      <input type="search" placeholder="O quê você está procurando" />
-      <nav>
-        <ul>
+    <header class="header">
+      <div class="header__links">
+        <!-- <div class="header__toggle-menu--container"> -->
+          <span id="toggle-menu" class="header__toggle-menu"onclick="toggleHeaderMenu()" ></span>
+        <!-- </div> -->
+        <div class="rchl-logo-container">
+          <span class="rchl-logo"></span>
+        </div>
+      </div>
+      <input class="header__search-input" type="search" placeholder="O que você está procurando?" >
+      <nav class="header__nav">
+        <ul class="header__nav-links" >
           <li><a href="">Novidades</a></li>
-          <li><a href="">Feminimo</a></li>
+          <li><a href="">Feminíno</a></li>
           <li><a href="">Masculino</a></li>
           <li><a href="">Infantil</a></li>
           <li><a href="">Moda Íntima</a></li>
@@ -41,9 +59,10 @@
       </nav>
     </header>
     <main>
+      <div class="main__content">
       <section class="breadcrumbs">
         <nav>
-          <ol>
+          <ol class="breadcrumbs__list">
             <li><a href="">Home</a></li>
             <li><a href="">Infantil</a></li>
             <li><a href="">Personagens</a></li>
@@ -52,7 +71,7 @@
         </nav>
       </section>
       <section class="filters">
-        <ul>
+        <ul class="filters__list">
           <li>Tamanho</li>
           <li>Cor</li>
           <li>Departamento</li>
@@ -60,133 +79,138 @@
           <li>Manga</li>
         </ul>
       </section>
-
+      <h1 class="main__title-collection">MARIO BROS</h1>
       <section class="products">
-        <ol>
+        <ol class="products__list">
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c1.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c2.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c3.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c4.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c5.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c6.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c7.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c8.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c9.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c10.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c11.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
           <li>
-            <div>
+            <div class="products__list-card">
               <img src="assets/c12.webp" alt="Camisa 1" />
-              <p>
+              <p class="products__list-card--description">
                 Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
               </p>
-              <p>R$ 199,90</p>
+              <p class="products__list-card--price">R$ 199,90</p>
             </div>
           </li>
         </ol>
       </section>
+    </div>
+
     </main>
     <footer>
-      <div class="offers">
+      <section class="footer">
+      <div class="footer__offers">
         <p>Receba ofertas e novidades por e-mail</p>
         <form action="/">
           <input type="email" placeholder="Digite aqui seu e-mail" />
           <button type="submit">Cadastrar</button>
         </form>
       </div>
-      <div class="mobile-apps">
+      <div class="footer__mobile-apps">
         <p>Baixe nosso App</p>
         <img src="assets/google-play.webp" alt="Google Play" />
         <img src="assets/app-store.webp" alt="App Store" />
       </div>
+    </section>
+
       <div class="contacts">
         <div>
           <img width="50px" src="assets/ico-attendance.svg" alt="Atendimento" />
