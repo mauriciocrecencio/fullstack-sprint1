@@ -19,10 +19,6 @@ $product-card-text: rgba(0, 0, 0, 0.87);
   }
 }
 
-// @include for-phone-only {
-//   ....
-// }
-
 @function calculateRem($size) {
   @return $size / 16px * 1rem;
 }
@@ -44,6 +40,7 @@ $product-card-text: rgba(0, 0, 0, 0.87);
   margin-top: 24px;
   margin-bottom: 24px;
   text-align: center;
+
   @media screen and (min-width: $break-nav-layout) {
     display: none;
   }
@@ -52,7 +49,6 @@ $product-card-text: rgba(0, 0, 0, 0.87);
 .breadcrumbs {
   &__list {
     @include flx(justify-content, flex-start);
-    // flex-direction: row;
     padding: 14px 0;
     border-bottom: 1px solid $horizontal-line;
 
@@ -68,6 +64,7 @@ $product-card-text: rgba(0, 0, 0, 0.87);
         content: "/";
         padding-left: 6px;
       }
+
       &:last-child {
         font-weight: bold;
       }
@@ -75,29 +72,25 @@ $product-card-text: rgba(0, 0, 0, 0.87);
       a {
         color: $breadcrumb-nav-color;
         text-decoration: none;
+
         &:hover {
           border-bottom: 1px black solid;
         }
       }
     }
   }
+
   @media screen and (max-width: $break-nav-layout) {
     display: none;
   }
 }
 
 .filters {
-  // @include flx(justify-content, flex-start);
-  // padding: 14px 0;
-  // border-bottom: 1px solid $horizontal-line;
-  // margin-left: 6px;
   &__list {
     @include flx(justify-content, flex-start);
-    // padding: 18px 0;
     border-bottom: 1px solid $horizontal-line;
 
     li {
-      // margin: 18px 0;
       padding: 18px 24px 18px 8px;
       text-transform: uppercase;
       @include fontSize(12px);
@@ -118,6 +111,7 @@ $product-card-text: rgba(0, 0, 0, 0.87);
       }
     }
   }
+
   @media screen and (max-width: $break-nav-layout) {
     display: none;
   }
@@ -130,8 +124,6 @@ $product-card-text: rgba(0, 0, 0, 0.87);
     grid-template-columns: repeat(auto-fit, minmax(240px, auto));
     grid-gap: 1rem;
 
-    // display: flex;
-    // flex-wrap: wrap;
     &-card {
       display: flex;
       align-items: center;
@@ -162,9 +154,6 @@ $product-card-text: rgba(0, 0, 0, 0.87);
       }
     }
     li {
-      // margin: 6px;
-
-      // margin: 0 15px;
       &:hover {
         cursor: pointer;
 

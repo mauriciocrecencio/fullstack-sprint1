@@ -16,33 +16,23 @@
           "script>"
       );
 
-      function toggleHeaderMenu() {
-        const menuElement = document.getElementById('toggle-menu')
-        menuElement.classList.toggle('active')
-      }
-
-      let primeiro = 5;
-      let segundo = 7;
-      segundo = primeiro;
-      primeiro = 10;
-      console.log(segundo);
-
+      const toggleHeaderMenu = () => {
+        const menuElement = document.getElementById("toggle-menu");
+        menuElement.classList.toggle("active");
+      };
     </script>
-    
   </head>
   <body>
     <header class="header">
       <div class="header__links">
-        <!-- <div class="header__toggle-menu--container"> -->
-          <span id="toggle-menu" class="header__toggle-menu"onclick="toggleHeaderMenu()" ></span>
-        <!-- </div> -->
+        <span id="toggle-menu" class="header__toggle-menu" onclick="toggleHeaderMenu()"></span>
         <div class="rchl-logo-container">
           <span class="rchl-logo"></span>
         </div>
       </div>
-      <input class="header__search-input" type="search" placeholder="O que você está procurando?" >
+      <input class="header__search-input" type="search" placeholder="O que você está procurando?" />
       <nav class="header__nav">
-        <ul class="header__nav-links" >
+        <ul class="header__nav-links">
           <li><a href="">Novidades</a></li>
           <li><a href="">Feminíno</a></li>
           <li><a href="">Masculino</a></li>
@@ -60,156 +50,155 @@
     </header>
     <main>
       <div class="main__content">
-      <section class="breadcrumbs">
-        <nav>
-          <ol class="breadcrumbs__list">
-            <li><a href="">Home</a></li>
-            <li><a href="">Infantil</a></li>
-            <li><a href="">Personagens</a></li>
-            <li>Mario Bros</li>
+        <section class="breadcrumbs">
+          <nav>
+            <ol class="breadcrumbs__list">
+              <li><a href="">Home</a></li>
+              <li><a href="">Infantil</a></li>
+              <li><a href="">Personagens</a></li>
+              <li>Mario Bros</li>
+            </ol>
+          </nav>
+        </section>
+        <section class="filters">
+          <ul class="filters__list">
+            <li>Tamanho</li>
+            <li>Cor</li>
+            <li>Departamento</li>
+            <li>Categoria</li>
+            <li>Manga</li>
+          </ul>
+        </section>
+        <h1 class="main__title-collection">MARIO BROS</h1>
+        <section class="products">
+          <ol class="products__list">
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c1.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c2.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c3.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c4.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c5.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c6.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c7.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c8.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c9.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c10.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c11.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
+            <li>
+              <div class="products__list-card">
+                <img src="assets/c12.webp" alt="Camisa 1" />
+                <p class="products__list-card--description">
+                  Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
+                </p>
+                <p class="products__list-card--price">R$ 199,90</p>
+              </div>
+            </li>
           </ol>
-        </nav>
-      </section>
-      <section class="filters">
-        <ul class="filters__list">
-          <li>Tamanho</li>
-          <li>Cor</li>
-          <li>Departamento</li>
-          <li>Categoria</li>
-          <li>Manga</li>
-        </ul>
-      </section>
-      <h1 class="main__title-collection">MARIO BROS</h1>
-      <section class="products">
-        <ol class="products__list">
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c1.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c2.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c3.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c4.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c5.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c6.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c7.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c8.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c9.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c10.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c11.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-          <li>
-            <div class="products__list-card">
-              <img src="assets/c12.webp" alt="Camisa 1" />
-              <p class="products__list-card--description">
-                Jaqueta Puffer Juvenil Com Capuz Super Mario Branco Tam 10 a 18
-              </p>
-              <p class="products__list-card--price">R$ 199,90</p>
-            </div>
-          </li>
-        </ol>
-      </section>
-    </div>
-
+        </section>
+      </div>
     </main>
     <footer>
       <section class="footer">
-      <div class="footer__offers">
-        <p>Receba ofertas e novidades por e-mail</p>
-        <form action="/">
-          <input type="email" placeholder="Digite aqui seu e-mail" />
-          <button type="submit">Cadastrar</button>
-        </form>
-      </div>
-      <div class="footer__mobile-apps">
-        <p>Baixe nosso App</p>
-        <img src="assets/google-play.webp" alt="Google Play" />
-        <img src="assets/app-store.webp" alt="App Store" />
-      </div>
-    </section>
+        <div class="footer__offers">
+          <p>Receba ofertas e novidades por e-mail</p>
+          <form action="/">
+            <input type="email" placeholder="Digite aqui seu e-mail" />
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+        <div class="footer__mobile-apps">
+          <p>Baixe nosso App</p>
+          <img src="assets/google-play.webp" alt="Google Play" />
+          <img src="assets/app-store.webp" alt="App Store" />
+        </div>
+      </section>
 
       <div class="contacts">
         <div>
@@ -217,27 +206,15 @@
           <p>Atendimento</p>
         </div>
         <div>
-          <img
-            width="50px"
-            src="assets/ico-faq.svg"
-            alt="Perguntas Frequentes"
-          />
+          <img width="50px" src="assets/ico-faq.svg" alt="Perguntas Frequentes" />
           <p>Perguntas Frequentes</p>
         </div>
         <div>
-          <img
-            width="50px"
-            src="assets/ico-invoice-and-statement.svg"
-            alt="Fatura e Extrato"
-          />
+          <img width="50px" src="assets/ico-invoice-and-statement.svg" alt="Fatura e Extrato" />
           <p>Fatura e Extrato</p>
         </div>
         <div>
-          <img
-            width="50px"
-            src="assets/ico-work-with-us.svg"
-            alt="Trabalhe Conosco"
-          />
+          <img width="50px" src="assets/ico-work-with-us.svg" alt="Trabalhe Conosco" />
           <p>Trabalhe Conosco</p>
         </div>
       </div>
@@ -330,25 +307,20 @@
       </div>
       <div class="copyright">
         <p>
-          © Copyright 2017 - 2019. Todos os direitos reservados. Lojas Riachuelo
-          S/A. Rua Landri Sales, 1.070, G02 Anexo B, Guarulhos - SP - Brasil CEP
-          07250-130 CNPJ 33.200.056/0441-97 | IE 796.420.926.112 | SAC
-          4003-0515.Direção de fotografia de produtos por Adriano Adrião.
-          Pagamento com Cartão Riachuelo, parcelas mínimas de R$ 15,00. Para os
-          demais cartões Visa, Mastercard, Elo, Diners, Hipercard e American
-          Express, parcelas mínimas de R$ 30,00. * COMPRE NO SITE e RETIRE NA
-          LOJA com FRETE GRÁTIS, conforme lojas participantes. Consulte as lojas
-          participantes nas opções de frete do seu pedido, conforme CEP de
-          entrega cadastrado. Frete único de R$ 4,99 para Sul e Sudeste em
-          compras a partir de R$ 129,00. Demais regiões o valor estará sujeito a
-          variações. Condição por tempo indeterminado, para tipo de entrega
-          “normal”. Preços, promoções, condições de pagamento, valores de frete
-          e disponibilidade de estoque são aplicados somente nas compras
-          efetuadas na loja online Riachuelo. Existe uma limitação de peças
-          iguais no mesmo pedido que muda de acordo com o tipo de produto. Em
-          caso de divergência de valores entre a página do produto e a Sacola de
-          Compras, a Riachuelo se reserva a garantir o valor exibido na Sacola
-          de Compras.
+          © Copyright 2017 - 2019. Todos os direitos reservados. Lojas Riachuelo S/A. Rua Landri
+          Sales, 1.070, G02 Anexo B, Guarulhos - SP - Brasil CEP 07250-130 CNPJ 33.200.056/0441-97 |
+          IE 796.420.926.112 | SAC 4003-0515.Direção de fotografia de produtos por Adriano Adrião.
+          Pagamento com Cartão Riachuelo, parcelas mínimas de R$ 15,00. Para os demais cartões Visa,
+          Mastercard, Elo, Diners, Hipercard e American Express, parcelas mínimas de R$ 30,00. *
+          COMPRE NO SITE e RETIRE NA LOJA com FRETE GRÁTIS, conforme lojas participantes. Consulte
+          as lojas participantes nas opções de frete do seu pedido, conforme CEP de entrega
+          cadastrado. Frete único de R$ 4,99 para Sul e Sudeste em compras a partir de R$ 129,00.
+          Demais regiões o valor estará sujeito a variações. Condição por tempo indeterminado, para
+          tipo de entrega “normal”. Preços, promoções, condições de pagamento, valores de frete e
+          disponibilidade de estoque são aplicados somente nas compras efetuadas na loja online
+          Riachuelo. Existe uma limitação de peças iguais no mesmo pedido que muda de acordo com o
+          tipo de produto. Em caso de divergência de valores entre a página do produto e a Sacola de
+          Compras, a Riachuelo se reserva a garantir o valor exibido na Sacola de Compras.
         </p>
       </div>
       <div class="complaints">
